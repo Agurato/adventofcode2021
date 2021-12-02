@@ -15,7 +15,7 @@ func TestDay{{.day}}(t *testing.T) {
 	assert.Equal(t, 0, day{{.day}}Part2(values))
 }
 
-var result int
+var resultDay{{.day}} int
 
 func BenchmarkDay{{.day}}Part1(b *testing.B) {
 	values, _ := ReadLines("inputs/day{{.day}}.txt")
@@ -23,7 +23,7 @@ func BenchmarkDay{{.day}}Part1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = day{{.day}}Part1(values)
 	}
-	result = r
+	resultDay{{.day}} = r
 }
 
 func BenchmarkDay{{.day}}Part2(b *testing.B) {
@@ -32,5 +32,5 @@ func BenchmarkDay{{.day}}Part2(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = day{{.day}}Part2(values)
 	}
-	result = r
+	resultDay{{.day}} = r
 }

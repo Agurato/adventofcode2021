@@ -88,8 +88,8 @@ func GenTodayFiles() {
 	data := map[string]string{
 		"day": day,
 	}
-	CreateFromTemplate("templates/source.template", sourcePath, data)
-	CreateFromTemplate("templates/test.template", testPath, data)
+	CreateFromTemplate("templates/day.go.tpl", sourcePath, data)
+	CreateFromTemplate("templates/day_test.go.tpl", testPath, data)
 	AddBenchmark(day)
 }
 
@@ -121,7 +121,7 @@ func CreateFromTemplate(source, dest string, data map[string]string) bool {
 }
 
 func AddBenchmark(day string) {
-	readme, err := os.OpenFile("text.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	readme, err := os.OpenFile("README.md", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Println(err)
 	}

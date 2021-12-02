@@ -15,7 +15,7 @@ func TestDay1(t *testing.T) {
 	assert.Equal(t, 1523, day1Part2(values))
 }
 
-var result int
+var resultDay1 int
 
 func BenchmarkDay1Part1(b *testing.B) {
 	values, _ := ReadLinesToInt("inputs/day1.txt")
@@ -23,7 +23,7 @@ func BenchmarkDay1Part1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = day1Part1(values)
 	}
-	result = r
+	resultDay1 = r
 }
 
 func BenchmarkDay1Part2(b *testing.B) {
@@ -32,5 +32,5 @@ func BenchmarkDay1Part2(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		r = day1Part2(values)
 	}
-	result = r
+	resultDay1 = r
 }
