@@ -42,3 +42,15 @@ BenchmarkDay3Part2-6   	   14049	     85717 ns/op	  148757 B/op	     143 allocs/
 PASS
 ok  	vmonot.dev/aoc2021	4.041s
 ```
+
+### Day 4
+
+```goos: windows
+goarch: amd64
+pkg: vmonot.dev/aoc2021
+cpu: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+BenchmarkDay4Part1-6   	    1101	   1049278 ns/op	 1075656 B/op	    5512 allocs/op
+BenchmarkDay4Part2-6   	     608	   1970392 ns/op	 1075684 B/op	    5512 allocs/op
+PASS
+ok  	vmonot.dev/aoc2021	2.917s
+```
