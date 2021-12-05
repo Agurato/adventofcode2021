@@ -152,3 +152,7 @@ func Chunks(s string, chunkSize int) []string {
 	chunks = append(chunks, s[currentStart:])
 	return chunks
 }
+
+func First(n int, _ error) int {
+	return n
+}
