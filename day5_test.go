@@ -11,8 +11,8 @@ func TestDay5(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-	assert.Equal(t, 0, day5Part1(values))
-	assert.Equal(t, 0, day5Part2(values))
+	assert.Equal(t, 7674, day5Part1(values))
+	assert.Equal(t, 20898, day5Part2(values))
 }
 
 var resultDay5 int
