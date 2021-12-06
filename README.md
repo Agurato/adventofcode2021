@@ -67,3 +67,8 @@ BenchmarkDay5Part2-6   	     344	   3696094 ns/op	   48113 B/op	    1500 allocs/
 PASS
 ok  	vmonot.dev/aoc2021	3.383s
 ```
+
+### Day 6
+
+```
+```
