@@ -23,9 +23,11 @@ func day6Part1(values []string) int {
 	}
 	for i := 0; i < 80; i++ {
 		var tmpFishesPerAge [9]int
+		// Aging
 		for j := 0; j < 8; j++ {
 			tmpFishesPerAge[j] = fishesPerAge[j+1]
 		}
+		// Reproduction
 		tmpFishesPerAge[8] = fishesPerAge[0]
 		tmpFishesPerAge[6] += fishesPerAge[0]
 		fishesPerAge = tmpFishesPerAge
@@ -44,15 +46,13 @@ func day6Part2(values []string) int {
 	}
 	for i := 0; i < 256; i++ {
 		var tmpFishesPerAge [9]int
+		// Aging
+		for j := 0; j < 8; j++ {
+			tmpFishesPerAge[j] = fishesPerAge[j+1]
+		}
+		// Reproduction
 		tmpFishesPerAge[8] = fishesPerAge[0]
-		tmpFishesPerAge[7] = fishesPerAge[8]
-		tmpFishesPerAge[6] = fishesPerAge[7] + fishesPerAge[0]
-		tmpFishesPerAge[5] = fishesPerAge[6]
-		tmpFishesPerAge[4] = fishesPerAge[5]
-		tmpFishesPerAge[3] = fishesPerAge[4]
-		tmpFishesPerAge[2] = fishesPerAge[3]
-		tmpFishesPerAge[1] = fishesPerAge[2]
-		tmpFishesPerAge[0] = fishesPerAge[1]
+		tmpFishesPerAge[6] += fishesPerAge[0]
 		fishesPerAge = tmpFishesPerAge
 	}
 	count := 0
