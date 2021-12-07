@@ -8,7 +8,7 @@ import (
 
 // Day7 Day 7
 func (aoc AOC) Day7() {
-	values, err := ReadLinesSep("inputs/day7.txt", ",")
+	values, err := ReadLinesSep("inputs/test.txt", ",")
 	if err != nil {
 		panic(err)
 	}
@@ -40,12 +40,15 @@ func day7Part2(values []string) int {
 		sum += pos
 	}
 	average := sum / len(positions)
-	sum = 0
+	sumFloor := 0
 	for _, pos := range positions {
 		distance := Abs(average - pos)
-		for i := 1; i <= distance; i++ {
-			sum += i
-		}
+		sumFloor += distance * (distance + 1) / 2
 	}
-	return sum
+	sumCeiling := 0
+	for _, pos := range positions {
+		distance := Abs(average + 1 - pos)
+		sumCeiling += distance * (distance + 1) / 2
+	}
+	return Min(sumFloor, sumCeiling)
 }

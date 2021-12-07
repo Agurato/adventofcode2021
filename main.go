@@ -157,6 +157,13 @@ func First(n int, _ error) int {
 	return n
 }
 
+func Min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
 func Abs(n int) int {
 	if n < 0 {
 		return -n
