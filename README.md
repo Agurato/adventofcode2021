@@ -71,9 +71,25 @@ ok  	vmonot.dev/aoc2021	3.383s
 ### Day 6
 
 ```
+goos: windows
+goarch: amd64
+pkg: vmonot.dev/aoc2021
+cpu: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+BenchmarkDay6Part1-6   	  194722	      5834 ns/op	    4864 B/op	       1 allocs/op
+BenchmarkDay6Part2-6   	  164334	      7468 ns/op	    4864 B/op	       1 allocs/op
+PASS
+ok  	vmonot.dev/aoc2021	2.719s
 ```
 
 ### Day 7
 
 ```
+goos: windows
+goarch: amd64
+pkg: vmonot.dev/aoc2021
+cpu: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+BenchmarkDay7Part1-6   	   14661	     78017 ns/op	    8217 B/op	       2 allocs/op
+BenchmarkDay7Part2-6   	  106658	     11516 ns/op	    8192 B/op	       1 allocs/op
+PASS
+ok  	vmonot.dev/aoc2021	3.542s
 ```
