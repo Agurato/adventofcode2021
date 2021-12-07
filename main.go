@@ -156,3 +156,10 @@ func Chunks(s string, chunkSize int) []string {
 func First(n int, _ error) int {
 	return n
 }
+
+func Abs(n int) int {
+	if n < 0 {
+		return -n
+	}
+	return n
+}

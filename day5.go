@@ -23,13 +23,6 @@ func PrintGrid(grid [10][10]int) {
 	}
 }
 
-func abs(val int) int {
-	if val < 0 {
-		return -val
-	}
-	return val
-}
-
 func getCoordFromString(line string) (start, end Coord) {
 	startEndStr := strings.Split(line, " -> ")
 	startStr := strings.Split(startEndStr[0], ",")
@@ -112,7 +105,7 @@ func day5Part2(values []string) int {
 			}
 		} else {
 			var x, y int
-			for i := 0; i <= abs(end.x-start.x); i++ {
+			for i := 0; i <= Abs(end.x-start.x); i++ {
 				grid[x+start.x][y+start.y]++
 				if end.x > start.x {
 					x++
