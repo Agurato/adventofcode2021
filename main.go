@@ -23,7 +23,11 @@ func main() {
 	dayNum, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		if os.Args[1] == "gen" {
-			GenTodayFiles()
+			if len(os.Args) == 3 {
+				GenDayFiles(os.Args[2])
+			} else {
+				GenDayFiles(time.Now().Format("2"))
+			}
 		} else {
 			fmt.Fprintf(os.Stderr, "Argument should be \"gen\" or a number\n")
 			os.Exit(1)
@@ -81,8 +85,7 @@ func ReadLinesToInt(path string) ([]int, error) {
 }
 
 // GenTodayFiles generates source and test files for today's challenge
-func GenTodayFiles() {
-	day := time.Now().Format("2")
+func GenDayFiles(day string) {
 	sourcePath := fmt.Sprintf("day%s.go", day)
 	testPath := fmt.Sprintf("day%s_test.go", day)
 	data := map[string]string{
